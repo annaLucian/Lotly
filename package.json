@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "@hiseb/confetti": "^2.2.0"
   }
 }
