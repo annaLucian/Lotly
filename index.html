@@ -1,15 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="./public/assets/favicon.png" />
+        <link rel="icon" type="image/png" href="/assets/favicon.png" />
         <link rel="stylesheet" href="/css/style.css" />
-        <title>Lotly</title>
+        <title>Lotly - Lotería de confianza</title>
     </head>
-    <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
+    <body class="page">
+        <header class="header">
+            <img src="/assets/logo.png" alt="Logo de Lotly" class="header__logo" />
+            <p class="header__tagline">Lotería de confianza.</p>
+        </header>
+
+        <main class="main">
+            <section class="lottery" aria-labelledby="lottery-title">
+                <h1 id="lottery-title" class="lottery__title">Prueba tu suerte</h1>
+                <p class="lottery__description">Adivina el número ganador y Gana!!!.</p>
+
+                <form class="lottery__form" id="lottery-form">
+                    <label for="input-user" class="lottery__label"> Ingresa un número del 1 al 10: </label>
+                    <input
+                        type="number"
+                        id="input-user"
+                        name="userNumber"
+                        class="lottery__input"
+                        placeholder="Ej. 7"
+                        min="1"
+                        max="10"
+                        step="1"
+                        required
+                    />
+                    <p class="lottery__error"></p>
+                    <button type="submit" class="lottery__button">Jugar</button>
+                </form>
+                <output class="lottery__result" id="lottery-result" aria-live="polite"></output>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <small class="footer__copyright">&copy; 2026 Lotly. Todos los derechos reservados.</small>
+        </footer>
+
+        <script type="module" src="/js/main.js"></script>
     </body>
 </html>
