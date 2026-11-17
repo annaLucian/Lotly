@@ -42,8 +42,8 @@ const isValidNumber = () => {
 };
 
 const isWinner = () => {
-    // const numRandom = Math.floor(Math.random() * 10) + 1;
-    const numRandom = 4;
+    const numRandom = Math.floor(Math.random() * 10) + 1;
+
     const numUser = isValidNumber();
     if (numUser === null) return;
 
