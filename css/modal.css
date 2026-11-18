@@ -1,0 +1,110 @@
+.lottery-modal {
+    border: none;
+    border-radius: 16px;
+    padding: 0;
+    max-width: 360px;
+    width: 90%;
+    background: #ffffff;
+    color: #1f2937;
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    margin: auto;
+    opacity: 0;
+    transform: scale(0.9);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        display 0.2s allow-discrete,
+        overlay 0.2s allow-discrete;
+}
+
+.lottery-modal[open] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@starting-style {
+    .lottery-modal[open] {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.lottery-modal::backdrop {
+    background-color: rgb(0 0 0 / 55%);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+}
+
+.lottery-modal__content {
+    padding: 28px 24px;
+}
+
+.lottery-modal__icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.lottery-modal__title {
+    margin: 0 0 12px 0;
+    font-size: 1.35rem;
+    color: #111827;
+}
+
+.lottery-modal__text {
+    margin: 0 0 8px 0;
+    font-size: 1.05rem;
+    color: #4b5563;
+}
+.number-user {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.number-random {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e6048a;
+}
+.lottery-modal__text--sub {
+    font-size: 0.9rem !important;
+    color: #6b7280 !important;
+}
+
+.lottery-modal__number {
+    display: inline-block;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+.lottery-modal__footer {
+    margin-top: 24px;
+}
+
+.lottery-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lottery-btn:hover {
+    background: #1d4ed8;
+}
+
+.lottery-btn--retry {
+    width: 100%;
+    background: #dc2626;
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+.lottery-btn--retry:hover {
+    background: #b91c1c;
+}

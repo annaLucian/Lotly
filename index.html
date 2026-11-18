@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="/assets/favicon.png" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/global.css" />
         <title>Lotly - Lotería de confianza</title>
     </head>
     <body class="page">
@@ -35,6 +35,19 @@
                     <button type="submit" class="lottery__button">Jugar</button>
                 </form>
                 <button class="history__button">historial de jugadas</button>
+                <dialog id="lottery__dialog" class="lottery-modal">
+                    <div class="lottery-modal__content">
+                        <h2 class="lottery-modal__title">
+                            ¡Ups! Este no es numero<span id="number-user" class="lottery-modal__number-user">4</span>
+                        </h2>
+                        <p class="lottery-modal__text">
+                            Tu número fue el <strong id="number-random" class="lottery-modal__number-random">0</strong>.
+                        </p>
+                        <div class="lottery-modal__footer">
+                            <button id="btn-retry" class="lottery-btn lottery-btn--retry">Volver a intentarlo</button>
+                        </div>
+                    </div>
+                </dialog>
                 <div class="lottery__result" id="lottery-result" aria-live="polite"></div>
             </section>
         </main>
@@ -44,5 +57,6 @@
         </footer>
 
         <script type="module" src="/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     </body>
 </html>

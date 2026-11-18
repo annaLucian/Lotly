@@ -1,0 +1,35 @@
+@import url('/css/index.css');
+@import url('/css/modal.css');
+@import url('/css/card-result.css');
+
+:root {
+    --color-bg: #f4f6f9;
+    --color-surface: #ffffff;
+    --color-accent: #e6048a;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+    --color-border: #cbd5e1;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+    background-color: #f4f6f9;
+    color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.5;
+}
