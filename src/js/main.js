@@ -3,7 +3,7 @@ import { historyResult, showResultHistory } from './historyResult.js';
 import { isValidNumber } from './validator.js';
 import { btnHistory, input, btn, paragraphError, containerResult } from './dom.js';
 
-const isWinner = () => {
+export const isWinner = () => {
     const numRandom = Math.floor(Math.random() * 10) + 1;
 
     const numUser = isValidNumber(input, paragraphError);

@@ -21,10 +21,10 @@ export const isValidNumber = (input, paragraphError) => {
         msg = '❌ Este campo es requerido';
     } else if (badInputFormated) {
         msg = '❌ formato incorrecto';
-    } else if (number < 1 || number > 10) {
-        msg = '❌ El numero tiene que estar entre 1 al 10';
     } else if (!Number.isInteger(number)) {
         msg = '❌ El numero no puede ser un decimal';
+    } else if (number < 1 || number > 10) {
+        msg = '❌ El numero tiene que estar entre 1 al 10';
     }
 
     const isError = msg !== '';

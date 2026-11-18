@@ -1,6 +1,6 @@
-@import url('/css/index.css');
-@import url('/css/modal.css');
-@import url('/css/card-result.css');
+@import url('./index.css');
+@import url('./modal.css');
+@import url('./card-result.css');
 
 :root {
     --color-bg: #f4f6f9;
@@ -30,6 +30,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-top: 2rem;
     line-height: 1.5;
 }
